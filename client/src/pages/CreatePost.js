@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 const CreatePost = () => {
     const initialValues = {
@@ -8,7 +9,11 @@ const CreatePost = () => {
         username: ''
     };
     const onSubmit = (data) => {
-        console.log(data);
+        axios.post('http://localhost:3001/posts', data).then(res => {
+            if (res.statusText == 'OK' || res.status === 200) {
+                console.log('Added successfully!');
+            }
+        });
     };
     const validationSchema = Yup.object().shape({
         title: Yup.string().required('You must add a title!'),
