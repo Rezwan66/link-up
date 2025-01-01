@@ -10,7 +10,7 @@ const CreatePost = () => {
     };
     const onSubmit = (data) => {
         axios.post('http://localhost:3001/posts', data).then(res => {
-            if (res.statusText == 'OK' || res.status === 200) {
+            if (res.statusText === 'OK' || res.status === 200) {
                 console.log('Added successfully!');
             }
         });
