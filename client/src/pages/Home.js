@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 const Home = () => {
     const [listOfPosts, setListOfPosts] = useState([]);
     useEffect(() => {
@@ -11,11 +12,11 @@ const Home = () => {
         <>
             <div>
                 {listOfPosts?.map((post, idx) =>
-                    <div key={idx} className='post'>
+                    <Link to={`/post/${post?.id}`} key={idx} className='post'>
                         <div className='title'>{post?.title}</div>
                         <div className='body'>{post?.postText}</div>
                         <div className='footer'>{post?.username}</div>
-                    </div>
+                    </Link>
                 )}
             </div>
         </>
