@@ -1,22 +1,25 @@
 import axios from "axios";
 import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
     const [listOfPosts, setListOfPosts] = useState([]);
+    const navigate = useNavigate();
+
     useEffect(() => {
         axios.get('http://localhost:3001/posts').then(res => {
             setListOfPosts(res.data);
         });
     }, []);
+
     return (
         <>
             <div>
                 {listOfPosts?.map((post, idx) =>
-                    <Link to={`/post/${post?.id}`} key={idx} className='post'>
+                    <div onClick={() => navigate(`/post/${post?.id}`)} key={idx} className='post'>
                         <div className='title'>{post?.title}</div>
                         <div className='body'>{post?.postText}</div>
                         <div className='footer'>{post?.username}</div>
-                    </Link>
+                    </div>
                 )}
             </div>
         </>
