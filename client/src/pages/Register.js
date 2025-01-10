@@ -2,7 +2,7 @@ const Register = () => {
   return (
     <>
       <div>
-        <h2> HELLO I Am Register </h2>
+        <h2> Register here </h2>
       </div>
     </>
   );
