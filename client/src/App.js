@@ -12,7 +12,8 @@ function App() {
       <Router>
         <div className="navbar">
           <Link to="/">HomePage</Link>
-          <Link to="createpost">Create A Post</Link>
+          <Link to="/createpost">Create A Post</Link>
+          <Link to="/login">Login</Link>
         </div>
         <Routes>
           <Route path="/" exact element={<Home />} />
