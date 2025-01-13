@@ -44,6 +44,7 @@ const Register = () => {
           <button type="submit">Register</button>
         </Form>
       </Formik>
+      <span>Already have an account? </span>
       <Link to="/login">Login</Link>
     </div>
   );
