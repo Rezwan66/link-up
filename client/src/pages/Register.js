@@ -20,6 +20,7 @@ const Register = () => {
   };
   return (
     <div className="registerContainer">
+      <h2>Register Here</h2>
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
