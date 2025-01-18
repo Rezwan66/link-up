@@ -12,24 +12,27 @@ const Login = () => {
     });
   };
   return (
-    <div className="loginContainer">
-      <label>Username:</label>
-      <input
-        type="text"
-        onChange={e => {
-          setUsername(e.target.value);
-        }}
-      />
-      <label>Password:</label>
-      <input
-        type="password"
-        onChange={e => {
-          setPassword(e.target.value);
-        }}
-      />
-      <button onClick={login}>Login</button>
-      <Link to="/register">Register</Link>
-    </div>
+    <>
+      <h2>Login Now</h2>
+      <div className="loginContainer">
+        <label>Username:</label>
+        <input
+          type="text"
+          onChange={e => {
+            setUsername(e.target.value);
+          }}
+        />
+        <label>Password:</label>
+        <input
+          type="password"
+          onChange={e => {
+            setPassword(e.target.value);
+          }}
+        />
+        <button onClick={login}>Login</button>
+        <Link to="/register">Register</Link>
+      </div>
+    </>
   );
 };
 export default Login;
