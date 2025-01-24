@@ -13,7 +13,7 @@ const Login = () => {
   };
   return (
     <>
-      <h2>Login Now Here Now please</h2>
+      <h2>Login Now Here Now please now</h2>
       <div className="loginContainer">
         <label>Username:</label>
         <input
