@@ -14,7 +14,7 @@ const Login = () => {
   return (
     <>
       <h2>Login Now Here Now please now</h2>
-      <h3>Ok now here</h3>
+      <h3>Ok now here please</h3>
       <div className="loginContainer">
         <label>Username:</label>
         <input
